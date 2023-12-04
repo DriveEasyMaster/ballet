@@ -1,0 +1,89 @@
+*{
+	box-sizing: border-box;
+}
+/******************************************body**************************************************************/
+body{
+	background: #000000;
+	font-size: 30px;
+}
+
+
+.body_2{/* Картинка заднего плана */
+
+	background-image:url(img/content/ROH.jpg);	
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+	position: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 1; /*Прозрачность заднего плана */
+}
+/*******************************************header*************************************************************/
+.header {
+	margin-bottom: 10px;
+	color:#ffffff;
+	font-size: 50px;
+	text-align: center;
+}
+.inner-header {
+	height: 85px;
+	background: rgba(70, 70, 107, 0.5);
+	height: 85px;
+}
+
+.title-inner-header{
+	font-size: 50px;
+}
+nav {
+	display: flex;/* Делим контейнер на части в соответствии с количеством блоков находящихся в нем*/
+	height: 20px;
+	width:255px;
+	margin-left: auto;/* Центрируем */
+    margin-right: auto;/* Центрируем */			
+}
+
+li{
+	display: inline-block;/*Распологаем блоки в линию*/	
+	margin-left: auto;/* Центрируем */
+	margin-right: auto;/* Центрируем */		
+}
+li a {
+	color:#bdbdbd;
+	font-size: 16px;
+	cursor:pointer;
+	text-decoration: none;/*Авто-подчекуивание ссылок*/	
+	display: inline-block;
+	/*list-style-type: none;  Убираем точки списка, но при  "display: inline-block;" не требуется*/
+	transition: 0.5s all; /* Выполнить Все (all) анимации*/		
+}
+li a:hover{/*При наведении мыши*/
+	color:#ffffff;
+	border-bottom: solid 1px wheat;
+	transition: 0.5s all; /* Выполнить Все (all) анимации*/	
+}
+
+/*******************************************content*************************************************************/
+.inner-content{
+	font-size: 50;
+	text-shadow: 2px 2px 2px black;
+	color: rgb(255, 255, 240);
+	text-align: center;
+}
+a {	
+	text-decoration: none;
+}
+a:hover {	
+	text-decoration: none;
+}
+
+img {	
+	height:120px;
+	transform:scale(1);
+	transition: 0.6s all;
+}
+img:hover {	
+	transform:scale(1.1);
+	transition: 0.5s all;
+
+}
