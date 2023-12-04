@@ -8,7 +8,7 @@ body{
 }
 
 
-.body_2{
+.body_2{/* Картинка заднего плана */
 
 	background-image:url(img/content/ROH.jpg);	
     z-index: -1;
@@ -17,7 +17,7 @@ body{
 	position: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 1;
+	opacity: 1; /*Прозрачность заднего плана */
 }
 /*******************************************row*************************************************************/
 .row:after {
@@ -29,8 +29,10 @@ body{
 	height: 0;
 }
 .row { display: inline-block; }
+/* start commented backslash hack \*/
 *html .row { height: 1 ; }
 .row { display: block; }
+/* close commented backslash hack */
 
 
 /*******************************************header*************************************************************/
@@ -51,29 +53,31 @@ body{
 	font-size: 50px;
 }
 nav {
-	display: flex;
+	display: flex;/* Делим контейнер на части в соответствии с количеством блоков находящихся в нем*/
 	height: 20px;
 	width:255px;
-	margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;/* Центрируем */
+    margin-right: auto;/* Центрируем */			
 }
 
 li{
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
+	display: inline-block;/*Распологаем блоки в линию*/	
+	margin-left: auto;/* Центрируем */
+	margin-right: auto;/* Центрируем */		
 }
 li a {
 	color:#bdbdbd;
 	font-size: 16px;
 	cursor:pointer;
-	text-decoration: none;
+	text-decoration: none;/*Авто-подчекуивание ссылок*/	
 	display: inline-block;
-	transition: 0.5s all; 
-li a:hover{
+	/*list-style-type: none;  Убираем точки списка, но при  "display: inline-block;" не требуется*/
+	transition: 0.5s all; /* Выполнить Все (all) анимации*/		
+}
+li a:hover{/*При наведении мыши*/
 	color:#ffffff;
 	border-bottom: solid 1px wheat;
-	transition: 0.5s all;
+	transition: 0.5s all; /* Выполнить Все (all) анимации*/	
 }
 
 /*******************************************content*************************************************************/
@@ -85,8 +89,8 @@ li a:hover{
 	color:#ffffff;
 	background-image:url(img/content/ROH.jpg);
 	background-repeat: no-repeat;	
-	opacity: 0.3;
-	position: relative;
+	opacity: 0.3;/* Прозрачность заднего плана */
+	position: relative;/* Разрешает накладывать другие элементы поверх себя */
 	min-height: 450px;
 	padding-left: 20px;
 	padding-top: 10px;
@@ -107,16 +111,17 @@ li a:hover{
 	transition: 2s all;		
 }
 .background-inner-content:hover { 
-	box-shadow: 10px 20px 20px #46466b;
+	box-shadow: 10px 20px 20px #46466b;/* Тень: сдвинута по оси X на 10 пиксиля, по оси Y на 20 пикселя, размыта на 3 пикселя и имеет черный цвет */
 	opacity: 1;
-	transition:opacity; 
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.2);
-	transition: 2s all; 
-  .background-inner-content:hover .text-inner-content{
+	transition: 2s all; /* Выполнить Все (all) анимации*/
+}
+.background-inner-content:hover .text-inner-content{
 	opacity: 0.8;
-	transition:opacity; 
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.05);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
 .www_cont{
 	display: inline-block;
@@ -127,12 +132,12 @@ li a:hover{
     width: 100%;
     height: 30px;
 	transform: scale(1);
-    transition: 1s all;	
+    transition: 1s all;/* Вернуться обратно к исходному полжениию за 5 секундВыполнить*/	
 }
-.www_cont:hover{
-	opacity: 1;
+.www_cont:hover{/*При наведении мыши*/
+	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
 	transform: scale(1.05);
-	transition: 1s all; 
+	transition: 1s all; /* Выполнить Все (all) анимации*/	
 }
 
 
@@ -149,29 +154,30 @@ li a:hover{
 	margin-left: 20px;
 	color:rgb(242, 148, 148);
 	font-size: 16px;	
-	text-decoration: none; 
+	text-decoration: none; /* Отменяем подчёркивание у ссылки */
 	transition: 1s all;	
 }
 
-.www_cont:hover{
-	opacity: 1;
+.www_cont:hover{/*При наведении мыши*/
+	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
 	transform: scale(1.05);
-	transition: 1s all; 
+	transition: 1s all; /* Выполнить Все (all) анимации*/	
 }
-.background-inner-content:hover .www_cont{
-	opacity: 1;
-	transition: 2s all; 
+.background-inner-content:hover .www_cont{/*При наведении мыши*/
+	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
+	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
 .youtube-inner-content {
 	opacity: 0.2;
 	margin-left:25px;
-	position: absolute;
+	position: absolute;/* Разрешает нанному элементу рассполагаться поверх другого у которого установлено свойство: 'position: relative' */
+	top: 130px;	
 	transition: 2s all;		
 	}
 .youtube-inner-content:hover { 
-	box-shadow: 1px 3px 30px #5f366b;
+	box-shadow: 1px 3px 30px #5f366b;/* Тень: сдвинута по оси X на 10 пиксиля, по оси Y на 20 пикселя, размыта на 3 пикселя и имеет черный цвет */
 	transform:scale(1.4);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/
 	
 }
 
@@ -190,28 +196,29 @@ li a:hover{
 	transition: 2s all;
 }
 .inner-sidebar-1:hover { 
-	box-shadow: 10px 20px 20px #46466b;
-	transition:opacity; 
+	box-shadow: 10px 20px 20px #46466b;/* Тень: сдвинута по оси X на 10 пиксиля, по оси Y на 20 пикселя, размыта на 3 пикселя и имеет черный цвет */
+	opacity: 1;
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.1);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/
 }
 .sidebar-1:hover~.content div.inner-content div.background-inner-content{
 	opacity: 0.8;
-	transition:opacity; 
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.03);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
 .sidebar-1:hover~.content div.inner-content div.background-inner-content a.www_cont{
 	opacity: 1;
-	transition:opacity; 
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.03);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
 .sidebar-1:hover~.content div.inner-content div.background-inner-content div.text-inner-content{
 	opacity: 1;
-	transition:opacity; 
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.03);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
 .www {
 	display: inline-block;
@@ -223,13 +230,14 @@ li a:hover{
     width: 100%;
     height: 30px;
 	transform: scale(1);
-    transition: 1s all;
-	text-decoration: none; 
-.www:hover{
-	opacity: 1;
+    transition: 1s all;/* Вернуться обратно к исходному полжениию за 5 секундВыполнить*/
+	text-decoration: none; /* Отменяем подчёркивание у ссылки */
+}
+.www:hover{/*При наведении мыши*/
+	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
 	transform: scale(1.1);
-	transition: 1s all; 
-	text-decoration: none; 
+	transition: 1s all; /* Выполнить Все (all) анимации*/
+	text-decoration: none; /* Отменяем подчёркивание у ссылки */
 }
 
 /*******************************************sidebar-2*************************************************************/
@@ -245,10 +253,11 @@ li a:hover{
 	transition: 2s all;
 	}
 .inner-sidebar-2:hover { 
-	box-shadow: 10px 20px 20px #46466b;
-	transition:opacity;
+	box-shadow: 10px 20px 20px #46466b;/* Тень: сдвинута по оси X на 10 пиксиля, по оси Y на 20 пикселя, размыта на 3 пикселя и имеет черный цвет */
+	opacity: 1;
+	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.1);
-	transition: 2s all; 
+	transition: 2s all; /* Выполнить Все (all) анимации*/
 }
 .inner-sidebar-2-title {
 	display: inline-block;
@@ -260,7 +269,7 @@ li a:hover{
     width: 100%;
     height: 30px;
 	transform: scale(1);
-    transition: 1s all;
+    transition: 1s all;/* Вернуться обратно к исходному полжениию за 5 секундВыполнить*/
 	text-decoration:dotted;
 }
 .www_2 {
@@ -273,12 +282,13 @@ li a:hover{
     width: 100%;
     height: 30px;
 	transform: scale(1);
-    transition: 1s all;
+    transition: 1s all;/* Вернуться обратно к исходному полжениию за 5 секундВыполнить*/
+	text-decoration: none;
 }
-.www_2:hover{
-	opacity: 1;
+.www_2:hover{/*При наведении мыши*/
+	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
 	transform: scale(1.1);
-	transition: 1s all;
+	transition: 1s all; /* Выполнить Все (all) анимации*/
 	text-decoration: none;
 }
 
@@ -291,7 +301,7 @@ li a:hover{
 	}	
 .inner-footer {
 	background:	#3d3c66;
-	opacity: 0.3;
+	opacity: 0.3;/* Прозрачность заднего плана */
 	height: 80px;
 	}	
 
@@ -299,7 +309,6 @@ li a:hover{
 
 
 	
-
 
 
 
