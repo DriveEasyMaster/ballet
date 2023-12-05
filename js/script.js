@@ -71,7 +71,7 @@ jQuery(document).ready(function() {
             ImageNamber = 1;
             } 
             jQuery('.body_2').fadeTo(2000,0);         
-            jQuery('.body_2').css('background-image', 'url(../css/img/background/' + ImageNamber_L + '.jpg)');
+            jQuery('.body_2').css('background-image', 'url(css/img/background/' + ImageNamber_L + '.jpg)');
             //jQuery('.inner-sidebar-1').css('background-image', 'url(../css/img/background_2/' + ImageNamber_L + '.jpg)');
             //jQuery('.inner-sidebar-2').css('background-image', 'url(../css/img/background_2/' + ImageNamber_R + '.jpg)');
             }, 
@@ -106,10 +106,10 @@ jQuery('.www').click(function() {    //Событие mouseover() происхо
     youtube_home = youtube_home_arr.get(Teg_id);
     URL = URL_arr.get(Teg_id); 
 
-    jQuery('.background-inner-content').css('background-image', 'url(../css/img/content/' + Teg_id + '.jpg)');//Обои Контент    
+    jQuery('.background-inner-content').css('background-image', 'url(css/img/content/' + Teg_id + '.jpg)');//Обои Контент    
     jQuery('#www-inner-content').html(Teg_txt);//Название блока контента, текст
     jQuery('#www-inner-content').attr('href', URL);//Ссылка на сайт. Запись новой ссылки или замена старой
-    jQuery('#www-youtube-inner-content').css('background-image', 'url(../css/img/ico/youtube.png)');//иконка кнопки youtube
+    jQuery('#www-youtube-inner-content').css('background-image', 'url(css/img/ico/youtube.png)');//иконка кнопки youtube
     jQuery('.text-inner-content').html(conten_text);//текст контента
     jQuery('#www-youtube-inner-content').attr('href', youtube_home);//Запись новой ссылки или замена старой
   
