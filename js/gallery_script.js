@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
         //mode:'lg-tube',/****************/
 
 
-        speed: 2500,
+        speed: 1500,
         addClass: 'myclass',// <Буферизуем 2 два следующих и два предыдуших изображения, для более мягкой смены>
         preload:3,// <Буферизуем 2 два следующих и два предыдуших изображения, для более мягкой смены>
         thumbnail:true,
@@ -47,7 +47,8 @@ jQuery(document).ready(function() {
         showThumbByDefault: false,
         //cssEasing: 'cubic-bezier(0.420, 0.000, 0.580, 1.000)',//**Easing: анимация замедления */
         //cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550),
-        cssEasing: 'cubic-bezier(0.600, 0.300, 0.400, 1.000)',
+        cssEasing: 'cubic-bezier(0.000, 0.250, 0.400, 1.000)',
+        swipeThreshold:5,//насколько далеко пользователь должен провести пальцем для перехода к следующему, пиксели
         
        
         
@@ -64,4 +65,3 @@ jQuery(document).ready(function() {
 
     });
 
-0
