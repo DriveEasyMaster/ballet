@@ -37,24 +37,24 @@ body{
 
 /*******************************************header*************************************************************/
 .header {
-	margin-bottom: 10px;
 	color:#ffffff;
 	font-size: 50px;
 	text-align: center;
 }
 .inner-header {
-	height: 85px;
+	height: 15%;
 	background: rgba(70, 70, 107, 0.5);
-	height: 85px;
 }
 
 
 .title-inner-header{
+	height: 50%;
 	font-size: 50px;
 }
 nav {
+	padding-top: 1%;
+	height: 50%;
 	display: flex;/* Делим контейнер на части в соответствии с количеством блоков находящихся в нем*/
-	height: 20px;
 	width:255px;
 	margin-left: auto;/* Центрируем */
     margin-right: auto;/* Центрируем */			
@@ -98,18 +98,7 @@ li a:hover{/*При наведении мыши*/
 	transition:opacity;	
 	transition: 2s all;
 }
-.text-inner-content {
-	color:white;
-	font-size: 16px;
-	text-shadow: 2px 2px 2px black;
-	opacity: 0;
-	padding-right: 30px;
-	padding-top: 50px;
-	text-align: riht;
-	margin-left:30px;
-	flex: 1 1 150px;	
-	transition: 2s all;		
-}
+
 .background-inner-content:hover { 
 	box-shadow: 10px 20px 20px #46466b;/* Тень: сдвинута по оси X на 10 пиксиля, по оси Y на 20 пикселя, размыта на 3 пикселя и имеет черный цвет */
 	opacity: 1;
@@ -117,69 +106,75 @@ li a:hover{/*При наведении мыши*/
 	transform:scale(1.05);
 	transition: 1s all; /* Выполнить Все (all) анимации*/
 }
-.background-inner-content:hover .text-inner-content{
+.background-inner-content:hover .text-content{
 	opacity: 0.8;
 	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.05);
 	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
-.www_cont{
-	display: inline-block;
+
+#content_headere{
+	margin-top: 3%;	
+}
+.content_header_a{
+	margin-top: 2%;	
+	padding-left: 5%;
 	color:white;
 	opacity: 0;
 	font-size: 20px;	
-	padding-left: 25px;
-    width: 100%;
-    height: 30px;
 	transform: scale(1);
-    transition: 1s all;/* Вернуться обратно к исходному полжениию за 5 секундВыполнить*/	
-}
-.www_cont:hover{/*При наведении мыши*/
-	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
-	transform: scale(1.05);
-	transition: 1s all; /* Выполнить Все (all) анимации*/	
+    transition: 0.5s all;/* Вернуться обратно к исходному полжениию за 5 секундВыполнить*/	
 }
 
-
-#www-inner-content{
-	margin-top: 20px;		
-}
-#www-youtube-inner-content{
-	height: 21px;
-	width: 30px;
-	border: 0px solid #141414;
-	border-radius: 6px;	    
-	background-size: contain;
-	background-repeat: no-repeat;
-	margin-left: 20px;
+#content_header_ico-youtube{
 	color:rgb(242, 148, 148);
-	font-size: 16px;	
+	font-size: 14px;	
 	text-decoration: none; /* Отменяем подчёркивание у ссылки */
 	transition: 1s all;	
 }
 
-.www_cont:hover{/*При наведении мыши*/
+.content_header_a:hover{/*При наведении мыши*/
 	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
-	transform: scale(1.05);
-	transition: 1s all; /* Выполнить Все (all) анимации*/	
+	transform: scale(1.02);
+	transition: 0.5s all; /* Выполнить Все (all) анимации*/	
 }
-.background-inner-content:hover .www_cont{/*При наведении мыши*/
+
+#content_header_href{
+	color:rgb(255, 255, 255);	
+	transition: 1s all;	
+}
+
+
+.text-content {
+	color:white;
+	font-size: 16px;
+	text-shadow: 2px 2px 2px black;
+	opacity: 0;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top: 10%;
+	text-align: riht;
+	transition: 2s all;		
+}
+
+
+.background-inner-content:hover .content_header_a{/*При наведении мыши*/
 	opacity: 1;/* Прозрачность заднего плана при наведении мыши*/
 	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
-.youtube-inner-content {
+#content_pleer_youtube {
+	scale:1;
 	opacity: 0.2;
-	margin-left:25px;
 	position: absolute;/* Разрешает нанному элементу рассполагаться поверх другого у которого установлено свойство: 'position: relative' */
-	top: 130px;	
-	transition: 2s all;		
+	left: 50%;
+	transform: translateX(-50%);
+	transition: 1s all;		
 	}
-.youtube-inner-content:hover { 
-	box-shadow: 1px 3px 30px #5f366b;/* Тень: сдвинута по оси X на 10 пиксиля, по оси Y на 20 пикселя, размыта на 3 пикселя и имеет черный цвет */
-	transform:scale(1.4);
-	transition: 2s all; /* Выполнить Все (all) анимации*/
-	
+#content_pleer_youtube:hover { 
+	scale:1.03;
 }
+
+
 
 
 /*******************************************sidebar-1*************************************************************/
@@ -208,13 +203,13 @@ li a:hover{/*При наведении мыши*/
 	transform:scale(1.03);
 	transition: 2s all; /* Выполнить Все (all) анимации*/	
 }
-.sidebar-1:hover~.content div.inner-content div.background-inner-content a.www_cont{
+.sidebar-1:hover~.content div.inner-content div.background-inner-content div.content_header_a{
 	opacity: 1;
 	transition:opacity; /* Трансформация Прозрачности заднего плана */
-	transform:scale(1.03);
-	transition: 2s all; /* Выполнить Все (all) анимации*/	
+	transform:scale(1.02);
+	transition: 1s all; /* Выполнить Все (all) анимации*/	
 }
-.sidebar-1:hover~.content div.inner-content div.background-inner-content div.text-inner-content{
+.sidebar-1:hover~.content div.inner-content div.background-inner-content div.text-content{
 	opacity: 1;
 	transition:opacity; /* Трансформация Прозрачности заднего плана */
 	transform:scale(1.03);
@@ -312,86 +307,99 @@ li a:hover{/*При наведении мыши*/
 	
 
 	.inner-header {
-		height: 15%;/******************************************888888888888888888888************************************************************/
+		height: 15%;
 	}
 	
 	.title-inner-header{
-		font-size: 100px;/******************************************888888888888888888888************************************************************/
+		font-size: 100px;
 	}
 	nav {
-		width:100%;/******************************************888888888888888888888************************************************************/
+		width:100%;
 	}
 	
 	li a {
-		font-size: 50px;/******************************************888888888888888888888************************************************************/
+		font-size: 50px;
 	}
 	
 	.content {	
-		width: 100%;/******************************************888888888888888888888************************************************************/
-		float: none;/******************************************888888888888888888888************************************************************/
+		width: 100%;
+		float: none;
 	}
 	.background-inner-content {
-		height: 90%;/******************************************888888888888888888888************************************************************/
-		background-size: cover;	/******************************************888888888888888888888************************************************************/
+		height: 90%;
+		background-size: cover;	
 	}
 	
-	.text-inner-content {
-		font-size: 45px;/******************************************888888888888888888888************************************************************/	
+	.text-content {
+		font-size: 45px;
 		text-shadow: 2px 2px 2px black;
-		padding-left: 150px;/******************************************888888888888888888888************************************************************/
-		padding-right: 50px;/******************************************888888888888888888888************************************************************/
 	}
 	
-	.www_cont{
-		font-size: 50px;/******************************************888888888888888888888************************************************************/	
-		padding-left: 150px;/******************************************888888888888888888888************************************************************/
+	.content_header_a{
+		margin-top: 8%;
+		font-size: 50px;
 	}
 	
-	#www-youtube-inner-content{
-		height: 50px;/******************************************888888888888888888888************************************************************/
-		width: 100px;/******************************************888888888888888888888************************************************************/
+	#content_header_ico-youtube{
+		font-size: 38px;	
 	}
-	
-	.youtube-inner-content {
-		margin-left:25%;/******************************************888888888888888888888************************************************************/
-		top: 50%;	/******************************************888888888888888888888************************************************************/
-		}
 	
 	.sidebar-1{
-		width: 100%;/******************************************888888888888888888888************************************************************/
-		float: none;/******************************************888888888888888888888************************************************************/
+		width: 100%;
+		float: none;
 	}
 	
 	.inner-sidebar-1 {
-		background-repeat: no-repeat;/******************************************888888888888888888888************************************************************/
-		background-size: cover;/******************************************888888888888888888888************************************************************/
-		 opacity: 0.7;/******************************************888888888888888888888************************************************************/	
+		background-repeat: no-repeat;
+		background-size: cover;
+		 opacity: 0.7;
 	}
 	
 	.www {
 		opacity: 0.7;
-		font-size: 50px;/******************************************888888888888888888888************************************************************/
-		margin-top: 42px;/******************************************888888888888888888888************************************************************/
-		padding-left: 100px;/******************************************888888888888888888888************************************************************/
+		font-size: 50px;
+		margin-top: 42px;
+		padding-left: 100px;
 	}
 	
 	.sidebar-2 {
-		width: 100%;/******************************************888888888888888888888************************************************************/
+		width: 100%;
 	}
 	
 	.inner-sidebar-2 {
-		background-repeat: no-repeat;/******************************************888888888888888888888************************************************************/
-		background-size: cover;/******************************************888888888888888888888************************************************************/
-		 opacity: 0.7;/******************************************888888888888888888888************************************************************/	
+		background-repeat: no-repeat;
+		background-size: cover;
+		 opacity: 0.7;
 	}
 	
 	.www_2 {
 		opacity: 0.7;
-		font-size: 50px;/******************************************888888888888888888888************************************************************/
-		margin-top: 42px;/******************************************888888888888888888888************************************************************/
-		padding-left: 100px;/******************************************888888888888888888888************************************************************/
+		font-size: 50px;
+		margin-top: 42px;
+		padding-left: 100px;
 	}
 	
+	.inner-sidebar-1 {
+		background-image:url(img/background/6L.jpg);
+
+	}
+	#content_pleer_youtube {		
+		top: 80%;
+		transform: translate(-50%, -50%) scale(1.3);
+	}
+	#content_pleer_youtube:hover { 
+		transform: translate(-50%, -50%) scale(1.5);
+		transition: 2s all;
+	}
+	.text-content { 
+		opacity: 0.5;
+	}
+	nav { 
+		margin-top: 3%;
+	}
+
+
+
 
 }
 
