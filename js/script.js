@@ -139,7 +139,7 @@ jQuery('.www').mouseout(function() {   //Событие mouseout() происх�
 
 
         jQuery('#content_header_href').html(' ');//Название блока контента, текст
-        jQuery('#content_header_ico-youtube').css('#');//иконка кнопки youtube
+        jQuery('#content_header_ico-youtube').html('');//иконка кнопки youtube
         jQuery('#text-content').html(' ');//текст контента
 
         
@@ -156,5 +156,7 @@ jQuery('.www').mouseout(function() {   //Событие mouseout() происх�
 
 
 });
+
+
 
 
