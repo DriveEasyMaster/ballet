@@ -41,8 +41,8 @@ jQuery(document).ready(function() {
         
     let prefix = '<iframe id="ytplayer" ';
     let type = 'type="text/html" ';
-    let width = 'width="480" ';
-    let height = 'height="270" ';
+    let width = 'width="640" ';
+    let height = 'height="360" ';
     let src_prefix = 'src="https://www.youtube.com/embed/';    
     let src_sufix = '?autoplay=1&modestbranding=1&color=white" ';
     let sufix = 'frameborder="0" allowfullscreen>';
@@ -82,7 +82,7 @@ jQuery(document).ready(function() {
     let Teg_id, Teg_href, Teg_txt, conten_text, youtube_home, URL, Teg_www_2_id, youtube;
 //*****************Следим за наведением мыши в .www*******************/  
     jQuery('.www').mouseover(function() {   //Событие mouseover() происходит при попадании курсора в границы элемента. Событие mouseout() происходит при выходе курсора за пределы области элемента.            
-        jQuery('.youtube-inner-content').html('');
+        jQuery('#content_pleer_youtube').html('');
 
     });
 
@@ -94,7 +94,7 @@ jQuery(document).ready(function() {
 //**********************************************************/
 
     let text_Ballet = "Ballet is a type of performance dance that originated during the Italian Renaissance in the fifteenth century and later developed into a concert dance form in France and Russia. It has since become a widespread and highly technical form of dance with its own vocabulary. Ballet has been influential globally and has defined the foundational techniques which are used in many other dance genres and cultures. Various schools around the world have incorporated their own cultures. As a result, ballet has evolved in distinct ways." 
-    jQuery('.text-inner-content').html(text_Ballet);//Название блока контента, текст
+    jQuery('#text-content').html(text_Ballet);//Название блока контента, текст
 
 
 //*****************Следим за кликом мыши в .www*******************/  
@@ -107,11 +107,11 @@ jQuery('.www').click(function() {    //Событие mouseover() происхо
     URL = URL_arr.get(Teg_id); 
 
     jQuery('.background-inner-content').css('background-image', 'url(css/img/content/' + Teg_id + '.jpg)');//Обои Контент    
-    jQuery('#www-inner-content').html(Teg_txt);//Название блока контента, текст
-    jQuery('#www-inner-content').attr('href', URL);//Ссылка на сайт. Запись новой ссылки или замена старой
-    jQuery('#www-youtube-inner-content').css('background-image', 'url(css/img/ico/youtube.png)');//иконка кнопки youtube
-    jQuery('.text-inner-content').html(conten_text);//текст контента
-    jQuery('#www-youtube-inner-content').attr('href', youtube_home);//Запись новой ссылки или замена старой
+    jQuery('#content_header_href').html(Teg_txt);//Название блока контента, текст
+    jQuery('#content_header_href').attr('href', URL);//Ссылка на сайт. Запись новой ссылки или замена старой
+    jQuery('#content_header_ico-youtube').html('YouTube');//иконка кнопки youtube
+    jQuery('#text-content').html(conten_text);//текст контента
+    jQuery('#content_header_ico-youtube').attr('href', youtube_home);//Запись новой ссылки или замена старой
   
     console.log(Teg_id);
 });
@@ -131,16 +131,16 @@ jQuery('.www').mouseout(function() {   //Событие mouseout() происх�
         y_url = youtube_arr.get(Teg_www_2_id);//Получить значение по ключу выполняется с помощью метода get
         youtube = fun_youtube(y_url);//Обращаемся к нашей функции fun_youtube с короткой ссылкой типа ('eqNJkorD2Yw') в ответ получае полный код плеера
 
-        jQuery('.youtube-inner-content').fadeTo(500,0.3);
-        jQuery('.youtube-inner-content').html(youtube);
-        jQuery('.youtube-inner-content').fadeTo(2000,1);
+        jQuery('#content_pleer_youtube').fadeTo(500,0.3);
+        jQuery('#content_pleer_youtube').html(youtube);
+        jQuery('#content_pleer_youtube').fadeTo(2000,1);
 
 
 
 
-        jQuery('#www-inner-content').html(' ');//Название блока контента, текст
-        jQuery('#www-youtube-inner-content').css('#');//иконка кнопки youtube
-        jQuery('.text-inner-content').html(' ');//текст контента
+        jQuery('#content_header_href').html(' ');//Название блока контента, текст
+        jQuery('#content_header_ico-youtube').css('#');//иконка кнопки youtube
+        jQuery('#text-content').html(' ');//текст контента
 
         
         console.log(Teg_txt);
