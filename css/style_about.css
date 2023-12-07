@@ -19,6 +19,20 @@ body{
 	background-size: cover;
 	opacity: 1; /*Прозрачность заднего плана */
 }
+.text-content {
+	background-color: rgba(0, 0, 0,0.5);
+	color:#fff0e6;
+	font-size: 18px;
+	text-shadow: 5px 5px 5px black;
+	opacity: 1;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top: 10%;
+	text-align: left;
+	transition: 2s all;
+}
+
+
 
 /*******************************************header*************************************************************/
 .header {
@@ -72,26 +86,9 @@ li a:hover{/*При наведении мыши*/
 	color: rgb(255, 255, 240);
 	text-align: center;
 }
-a {	
-	text-decoration: none;
-}
-a:hover {	
-	text-decoration: none;
-}
-
-img {	
-	height:120px;
-	transform:scale(1);
-	transition: 0.6s all;
-}
-img:hover {	
-	transform:scale(1.1);
-	transition: 0.5s all;
-
-}
-
 
 /*******************************************    mobile    *************************************************************/
+
 
 @media (max-width: 1000px) {
 	
@@ -122,7 +119,16 @@ img:hover {
 	
 	.text-content {
 		font-size: 45px;
+		background-color: rgba(0, 0, 0,0.4);
+		color:#fff0e6;
 		text-shadow: 2px 2px 2px black;
+		opacity: 1;
+		margin-top: 8%;
+		padding-right: 5%;
+		padding-left: 5%;
+		padding-top: 1%;
+		text-align: left;
+		transition: 2s all;
 	}
 	
 	.content_header_a{
@@ -132,6 +138,12 @@ img:hover {
 	
 	#content_header_ico-youtube{
 		font-size: 38px;	
+	}
+
+	img {	
+		height:180px;
+		transform:scale(1);
+		transition: 0.6s all;
 	}
 	
 	.sidebar-1{
@@ -182,14 +194,11 @@ img:hover {
 		transition: 2s all;
 	}
 	.text-content { 
-		opacity: 0.5;
+		opacity: 1;
 	}
 	nav { 
 		margin-top: 3%;
 	}
-
-
-
 
 }
 
