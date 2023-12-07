@@ -93,7 +93,8 @@ jQuery(document).ready(function() {
     }); 
 //**********************************************************/
 
-    let text_Ballet = "Ballet is a type of performance dance that originated during the Italian Renaissance in the fifteenth century and later developed into a concert dance form in France and Russia. It has since become a widespread and highly technical form of dance with its own vocabulary. Ballet has been influential globally and has defined the foundational techniques which are used in many other dance genres and cultures. Various schools around the world have incorporated their own cultures. As a result, ballet has evolved in distinct ways." 
+        let text_Ballet = "<p>Ballet is a type of performance dance that originated during the Italian Renaissance in the fifteenth century and later developed into a concert dance form in France and Russia. It has since become a widespread and highly technical form of dance with its own vocabulary.</p><p>Ballet has been influential globally and has defined the foundational techniques which are used in many other dance genres and cultures. Various schools around the world have incorporated their own cultures. As a result, ballet has evolved in distinct ways.</p>" 
+
     jQuery('#text-content').html(text_Ballet);//Название блока контента, текст
 
 
