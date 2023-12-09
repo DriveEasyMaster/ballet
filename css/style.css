@@ -372,7 +372,7 @@ li a:hover{/*При наведении мыши*/
 	
 	.www {
 		opacity: 1;
-		font-size: 50px;
+		font-size: 55px;
 		margin-top: 42px;
 		padding-left: 100px;
 	}
@@ -388,8 +388,8 @@ li a:hover{/*При наведении мыши*/
 	}
 	
 	.www_2 {
-		opacity: 0.7;
-		font-size: 50px;
+		opacity: 1;
+		font-size: 55px;
 		margin-top: 42px;
 		padding-left: 100px;
 	}
